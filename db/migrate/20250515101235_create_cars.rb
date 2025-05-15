@@ -5,7 +5,7 @@ class CreateCars < ActiveRecord::Migration[7.1]
       t.string :model
       t.integer :year
       t.string :fuel
-      t.integer :owner_id
+      t.references :owner, null: false, foreign_key: true
 
       t.timestamps
     end
